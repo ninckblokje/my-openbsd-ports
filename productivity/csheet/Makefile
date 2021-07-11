@@ -6,10 +6,10 @@ MASTER_SITES = 		https://github.com/ninckblokje/csheet/archive/
 
 GH_ACCOUNT =		ninckblokje
 GH_PROJECT =		csheet
-VERSION =		1.9
-GH_TAGNAME =		${VERSION}
-DISTNAME =              csheet-${VERSION}
-PKGNAME =               csheet-${VERSION}
+V =		1.9.1
+GH_TAGNAME =		v${V}
+DISTNAME =              csheet-${V}
+PKGNAME =               csheet-${V}
 
 CATEGORIES =		productivity
 
@@ -19,11 +19,11 @@ PERMIT_PACKAGE =	Yes
 MODULES =		lang/go
 
 MODGO_MODNAME =		csheet
-MODGO_VERSION =         ${VERSION}
+MODGO_VERSION =         v${V}
 MODGO_MODULES =         github.com/atotto/clipboard v0.1.4
 MODGO_MODFILES =        github.com/atotto/clipboard v0.1.4
 MODGO_LDFLAGS += \
-	-X main.csheetVersion=${VERSION} \
+	-X main.csheetVersion=${V} \
         -X main.csheetRevision=PORTS
 
 WANTLIB +=              c pthread
