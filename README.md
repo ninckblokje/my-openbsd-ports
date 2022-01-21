@@ -6,6 +6,29 @@
 - Clone or export the repo
 - Add the path for the repo to `PORTSDIR_PATH`: `export PORTSDIR_PATH="/home/ninckblokje/dev/sources/my-openbsd-ports:/usr/ports:/usr/ports/mystuff"`
 
+## Update steps
+
+- `make clean`
+- `make makesum`
+- `make extract`
+- `make build`
+- `make clean configure`
+- `make fake`
+- `make update-plist`
+
+## Build steps
+
+- `make clean`
+- `make package`
+
+## Install steps
+
+- `make install`
+
+## Uninstall steps
+
+- `make uninstall`
+
 ## Links
 
 https://www.openbsd.org/faq/ports/guide.html
