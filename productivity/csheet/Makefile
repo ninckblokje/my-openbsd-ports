@@ -6,7 +6,7 @@ MASTER_SITES = 		https://github.com/ninckblokje/csheet/archive/
 
 GH_ACCOUNT =		ninckblokje
 GH_PROJECT =		csheet
-V =		1.9.1
+V =			1.9.2
 GH_TAGNAME =		v${V}
 DISTNAME =              csheet-${V}
 PKGNAME =               csheet-${V}
@@ -24,7 +24,8 @@ MODGO_MODULES =         github.com/atotto/clipboard v0.1.4
 MODGO_MODFILES =        github.com/atotto/clipboard v0.1.4
 MODGO_LDFLAGS += \
 	-X main.csheetVersion=${V} \
-        -X main.csheetRevision=PORTS
+        -X main.csheetRevision=PORTS \
+	-buildid=
 
 WANTLIB +=              c pthread
 
