@@ -23,11 +23,11 @@
 
 ## Install steps
 
-- `make install`
+- `doas make install`
 
 ## Uninstall steps
 
-- `make uninstall`
+- `doas make uninstall`
 
 ## Links
 
