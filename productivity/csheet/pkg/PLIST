@@ -1,3 +1,2 @@
-@comment $OpenBSD: PLIST,v$
 @bin bin/csheet
 @man man/man1/csheet.1
