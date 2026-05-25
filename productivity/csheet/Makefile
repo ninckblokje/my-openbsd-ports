@@ -6,7 +6,7 @@ MASTER_SITES = 		https://github.com/ninckblokje/csheet/archive/
 
 GH_ACCOUNT =		ninckblokje
 GH_PROJECT =		csheet
-V =			1.11.1
+V =			1.14.0
 GH_TAGNAME =		v${V}
 DISTNAME =              csheet-${V}
 PKGNAME =               csheet-${V}
