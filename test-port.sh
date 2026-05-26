@@ -2,15 +2,15 @@
 # Test an OpenBSD port on a remote host.
 # Usage: test-port.sh <port-path> [ssh-host]
 #   port-path: relative path from repo root, e.g. productivity/csheet
-#   ssh-host:  SSH host alias (default: puffy-risc)
+#   ssh-host:  SSH host alias
 #
 # Requires doas to be configured on the remote host.
 
 set -e
 
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
-PORT_PATH=${1:?Usage: $0 <port-path> [ssh-host]}
-SSH_HOST=${2:-puffy-risc}
+PORT_PATH=${1:?Usage: $0 <port-path> <ssh-host>}
+SSH_HOST=${2:?Usage: $0 <port-path> <ssh-host>}
 REMOTE_PORTS_DIR=/usr/ports
 LOCAL_PORT_DIR="$SCRIPT_DIR/$PORT_PATH"
 
