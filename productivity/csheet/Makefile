@@ -6,7 +6,7 @@ MASTER_SITES = 		https://github.com/ninckblokje/csheet/archive/
 
 GH_ACCOUNT =		ninckblokje
 GH_PROJECT =		csheet
-V =			1.11.1
+V =			1.14.0
 GH_TAGNAME =		v${V}
 DISTNAME =              csheet-${V}
 PKGNAME =               csheet-${V}
@@ -18,18 +18,18 @@ PERMIT_PACKAGE =	Yes
 
 MODULES =		lang/go
 
-MODGO_MODNAME =		csheet
+MODGO_MODNAME =		github.com/ninckblokje/csheet
 MODGO_VERSION =         v${V}
 MODGO_MODULES =         github.com/atotto/clipboard v0.1.4
 MODGO_MODFILES =        github.com/atotto/clipboard v0.1.4
 MODGO_LDFLAGS += \
-	-X main.csheetVersion=${V} \
-        -X main.csheetRevision=PORTS \
+	-X main.version=${V} \
+	-X main.commit=PORTS \
 	-buildid=
 
 WANTLIB +=              c pthread
 
-WRKSRC = 		${WRKDIR}/${PKGNAME}
+WRKSRC = 		${WRKDIR}/github.com/ninckblokje/csheet@v${V}
 
 ALL_TARGET =		github.com/ninckblokje/csheet
 
